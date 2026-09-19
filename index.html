@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Permet au site de s'adapter aux différentes tailles d'écran -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Une nouvelle quête</title>
+
+    <!-- Feuille de style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================================================
+         FOND
+         ========================================================= -->
+
+    <div class="background"></div>
+
+    <!-- Effet de brume -->
+    <div class="fog fog-1"></div>
+    <div class="fog fog-2"></div>
+
+
+    <!-- =========================================================
+         CONTENU PRINCIPAL
+         ========================================================= -->
+
+    <main class="quest-container">
+
+        <!-- Petit texte d'introduction -->
+        <p id="intro" class="intro">
+            UNE NOUVELLE QUÊTE T'ATTEND...
+        </p>
+
+
+        <!-- Titre principal -->
+        <h1 id="title" class="title hidden">
+            LE SERMENT DU SANG
+        </h1>
+
+
+        <!-- Ligne décorative -->
+        <div id="separator" class="separator hidden"></div>
+
+
+        <!-- =====================================================
+             ÉTAPE 1
+             ===================================================== -->
+
+        <section id="step1" class="quest-step hidden">
+
+            <p class="step-number">
+                ÉTAPE I
+            </p>
+
+            <h2>
+                LE RÉPRouvé
+            </h2>
+
+            <p class="objective">
+                Retrouve <strong>Mogh, le Réprouvé</strong>.
+            </p>
+
+            <p class="objective">
+                Terrasse-le.
+            </p>
+
+        </section>
+
+
+        <!-- =====================================================
+             MESSAGE DE TRANSITION
+             ===================================================== -->
+
+        <section id="transition" class="transition hidden">
+
+            <p>
+                CE N'ÉTAIT QUE LE COMMENCEMENT...
+            </p>
+
+        </section>
+
+
+        <!-- =====================================================
+             ÉTAPE 2
+             ===================================================== -->
+
+        <section id="step2" class="quest-step hidden">
+
+            <p class="step-number">
+                ÉTAPE II
+            </p>
+
+            <h2>
+                LE SEIGNEUR DU SANG
+            </h2>
+
+            <p class="objective">
+                Lorsque les terres enneigées seront accessibles,
+            </p>
+
+            <p class="objective">
+                retrouve <strong>Mogh, Seigneur du Sang</strong>.
+            </p>
+
+            <p class="objective final-objective">
+                Terrasse-le.
+            </p>
+
+        </section>
+
+
+        <!-- =====================================================
+             FIN
+             ===================================================== -->
+
+        <div id="final-message" class="final-message hidden">
+
+            <div class="rune"></div>
+
+            <p>
+                QUE LA QUÊTE COMMENCE
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================================================
+         SCRIPT
+         ========================================================= -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
