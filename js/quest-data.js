@@ -6,11 +6,10 @@
 window.questData = {
     scenes: [
         { id: "scene-1", continueDelay: 11000 },
-        { id: "scene-2", continueDelay: 3500 },
-        { id: "scene-3", continueDelay: 2500 },
+        { id: "scene-2", continueDelay: 6000 },
+        { id: "scene-3", continueDelay: 4000 },
         { id: "scene-4", continueDelay: 4000 },
-        { id: "scene-5", continueDelay: 3500 },
-        { id: "scene-6", continueDelay: 4000 },
+        { id: "scene-5", continueDelay: 4000 },
         { id: "scene-final", continueDelay: 0, final: true }
     ],
 
