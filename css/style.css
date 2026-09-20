@@ -231,7 +231,7 @@ body::after {
     background: #000;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.7s ease;
+    transition: opacity var(--transition-slow);
 }
 
 body.scene-transitioning::after {
@@ -1209,6 +1209,49 @@ body.stage-two-active .background {
     transform: translateY(-20px);
 }
 
+#scene-final .final-title,
+#scene-final .final-line,
+#scene-final .final-congratulations {
+    opacity: 0;
+    transform: translateY(14px);
+}
+
+#scene-final.active .final-title {
+    animation: finalTitleAppear 1.4s ease 0.2s forwards;
+}
+
+#scene-final.active .final-line {
+    animation: finalLineAppear 1.2s ease 1.25s forwards;
+}
+
+#scene-final.active .final-line.highlight {
+    animation: finalHighlightAppear 1.3s ease 2.9s forwards;
+}
+
+#scene-final.active .final-congratulations {
+    animation: finalCongratulationsAppear 1.5s ease 4.4s forwards;
+}
+
+@keyframes finalTitleAppear {
+    from { opacity: 0; transform: translateY(14px); letter-spacing: 0.18em; }
+    to { opacity: 1; transform: translateY(0); letter-spacing: 0.1em; }
+}
+
+@keyframes finalLineAppear {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes finalHighlightAppear {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes finalCongratulationsAppear {
+    from { opacity: 0; transform: translateY(18px); letter-spacing: 0.2em; }
+    to { opacity: 1; transform: translateY(0); letter-spacing: 0.12em; }
+}
+
 #scene-final .final-title {
     margin: 0 0 55px;
     color: #c6b78f;
@@ -1235,4 +1278,12 @@ body.stage-two-active .background {
     color: #c6b78f;
     font-size: clamp(18px, 1.8vw, 27px);
     letter-spacing: 0.12em;
+}
+
+#scene-final.no-animation .final-title,
+#scene-final.no-animation .final-line,
+#scene-final.no-animation .final-congratulations {
+    opacity: 1;
+    transform: none;
+    animation: none !important;
 }

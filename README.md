@@ -1,6 +1,6 @@
-# Le Serment du Sang
+# Le Serment du Sang — Elden Ring
 
-Site statique de révélation de quête pour le défi Elden Ring du streamer.
+Site de révélation de quête pour le live.
 
 ## Structure
 
@@ -12,23 +12,16 @@ elden-ring-quete/
 ├── js/
 │   ├── quest-data.js
 │   └── script.js
-├── assets/
-│   ├── images/
-│   └── audio/
-└── README.md
+└── assets/
+    ├── images/
+    └── audio/
 ```
 
-## Rôle des fichiers
+## Fonctionnement
 
-- `index.html` : structure et contenu HTML de la page.
-- `css/style.css` : apparence, animations et effets visuels.
-- `js/quest-data.js` : textes, délais de scènes et configuration de la quête.
-- `js/script.js` : navigation, indices, clavier et particules.
-- `assets/images/` : futures images éventuelles.
-- `assets/audio/` : futurs sons éventuels.
-
-## Hébergement
-
-Le site est prévu pour fonctionner comme un site statique, notamment avec GitHub Pages.
-
-Aucun framework ni étape de compilation n'est nécessaire.
+- Les scènes sont numérotées séquentiellement de 1 à 5, puis la scène finale.
+- La progression est sauvegardée dans `localStorage`.
+- La version de sauvegarde est volontairement passée à `3` pour invalider les anciennes progressions incompatibles.
+- Les indices sont sauvegardés séparément pour chaque étape.
+- La navigation des scènes n'affiche que les scènes déjà atteintes.
+- Le bouton de réinitialisation est conservé pour les tests.

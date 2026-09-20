@@ -21,7 +21,7 @@
     const sceneNavigation = document.getElementById("scene-navigation");
     const particlesContainer = document.getElementById("particles");
     const resetProgressButton = document.getElementById("reset-progress-button");
-    const TRANSITION_DURATION = 700;
+    const TRANSITION_DURATION = 1500;
 
     /* ------------------------------------------------------------
        SAUVEGARDE LOCALE
@@ -346,22 +346,9 @@
             return;
         }
 
-        // La validation du Réprouvé possède une courte respiration avant
-        // d'afficher la scène de transition. Cela donne au clic une vraie
-        // sensation de victoire sans nécessiter d'intervention du modérateur.
-        if (state.currentScene === 2) {
-            clearContinueTimer();
-            setContinueVisible(false);
-            continueButton.classList.remove("victory-button");
-
-            state.victoryTimer = window.setTimeout(() => {
-                state.victoryTimer = null;
-                showScene(3);
-            }, 550);
-
-            return;
-        }
-
+        // Toutes les scènes utilisent désormais la même transition.
+        // Les animations narratives propres à certaines scènes restent
+        // indépendantes de ce changement de scène.
         showScene(state.currentScene + 1);
     }
 
