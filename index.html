@@ -2,140 +2,141 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-
-    <!-- Permet au site de s'adapter aux différentes tailles d'écran -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Une quête mystérieuse attend le Sans-Éclat.">
+    <title>Le Serment du Sang</title>
 
-    <title>Une nouvelle quête</title>
-
-    <!-- Feuille de style -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+    <div class="background" aria-hidden="true"></div>
+    <div class="particles" id="particles" aria-hidden="true"></div>
+    <div class="fog fog-1" aria-hidden="true"></div>
+    <div class="fog fog-2" aria-hidden="true"></div>
 
-    <!-- =========================================================
-         FOND
-         ========================================================= -->
-
-    <div class="background"></div>
-
-    <!-- Effet de brume -->
-    <div class="fog fog-1"></div>
-    <div class="fog fog-2"></div>
-
-
-    <!-- =========================================================
-         CONTENU PRINCIPAL
-         ========================================================= -->
+    <header class="scene-navigation-wrapper">
+        <nav id="scene-navigation" class="scene-navigation" aria-label="Navigation des scènes"></nav>
+    </header>
 
     <main class="quest-container">
+        <section class="scene active" id="scene-1" aria-label="Scène 1">
+            <p class="small-title">SANS-ÉCLAT</p>
 
-        <!-- Petit texte d'introduction -->
-        <p id="intro" class="intro">
-            UNE NOUVELLE QUÊTE T'ATTEND...
-        </p>
+            <div class="title-divider" aria-hidden="true">
+                <span></span>
+                <b>◆</b>
+                <span></span>
+            </div>
 
-
-        <!-- Titre principal -->
-        <h1 id="title" class="title hidden">
-            LE SERMENT DU SANG
-        </h1>
-
-
-        <!-- Ligne décorative -->
-        <div id="separator" class="separator hidden"></div>
-
-
-        <!-- =====================================================
-             ÉTAPE 1
-             ===================================================== -->
-
-        <section id="step1" class="quest-step hidden">
-
-            <p class="step-number">
-                ÉTAPE I
+            <p class="main-text intro-line">
+                Félicitations, 1650 âmes ont prêté serment à tes côtés.
             </p>
 
-            <h2>
-                LE RÉPRouvé
-            </h2>
-
-            <p class="objective">
-                Retrouve <strong>Mogh, le Réprouvé</strong>.
+            <p class="italic-text intro-line">
+                Une nouvelle épreuve t'attend...
             </p>
-
-            <p class="objective">
-                Terrasse-le.
-            </p>
-
         </section>
 
-
-        <!-- =====================================================
-             MESSAGE DE TRANSITION
-             ===================================================== -->
-
-        <section id="transition" class="transition hidden">
-
-            <p>
-                CE N'ÉTAIT QUE LE COMMENCEMENT...
-            </p>
-
+        <section class="scene" id="scene-2" aria-label="Scène 2">
+            <p class="italic-text large">Le sang appelle le sang.</p>
+            <p class="italic-text large">Une dette ancienne réclame son dû.</p>
         </section>
 
-
-        <!-- =====================================================
-             ÉTAPE 2
-             ===================================================== -->
-
-        <section id="step2" class="quest-step hidden">
-
-            <p class="step-number">
-                ÉTAPE II
-            </p>
-
-            <h2>
-                LE SEIGNEUR DU SANG
-            </h2>
-
-            <p class="objective">
-                Lorsque les terres enneigées seront accessibles,
-            </p>
-
-            <p class="objective">
-                retrouve <strong>Mogh, Seigneur du Sang</strong>.
-            </p>
-
-            <p class="objective final-objective">
-                Terrasse-le.
-            </p>
-
+        <section class="scene" id="scene-3" aria-label="Scène 3">
+            <h1>LE SERMENT DU SANG</h1>
         </section>
 
+        <section class="scene quest-scene" id="scene-4" aria-label="Étape I">
+            <h2>LE RÉPROUVÉ</h2>
 
-        <!-- =====================================================
-             FIN
-             ===================================================== -->
+            <div class="quest-text">
+                <p>Un prince oublié.</p>
+                <p>Un sang maudit.</p>
+                <p>Des chaînes dans les profondeurs.</p>
+                <p class="highlight">Sous la capitale, il attend.</p>
+            </div>
 
-        <div id="final-message" class="final-message hidden">
+            <div class="hints" data-hint-stage="step1">
+                <button class="hint-button" type="button" data-action="reveal-hint">
+                    INTERROGER LA GRÂCE
+                </button>
 
-            <div class="rune"></div>
+                <div class="hint-container" data-role="hint-container" aria-live="polite" aria-hidden="true" hidden>
+                    <div class="hint-carousel" data-role="hint-carousel">
+                        <div class="hint-track" data-role="hint-track"></div>
+                    </div>
 
-            <p>
-                QUE LA QUÊTE COMMENCE
-            </p>
+                    <div class="hint-navigation" data-role="hint-navigation" aria-label="Navigation des indices"></div>
 
-        </div>
+                    <button class="next-hint-button" type="button" data-action="next-hint">
+                        INTERROGER LA GRÂCE
+                    </button>
 
+                    <p class="hint-status" data-role="hint-status" hidden>Là où la Grâce se tait, le chemin commence.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="scene" id="scene-5" aria-label="Transition">
+            <p class="italic-text large">Le sang du Réprouvé a été versé.</p>
+            <p class="italic-text large">Mais ton serment n'est pas encore accompli.</p>
+        </section>
+
+        <section class="scene quest-scene" id="scene-6" aria-label="Étape II">
+            <p class="step-number">ÉTAPE II</p>
+            <h2>LE SEIGNEUR DU SANG</h2>
+
+            <div class="quest-text">
+                <p>Un autre prince.</p>
+                <p>Un autre royaume.</p>
+                <p class="highlight">Lorsque les terres enneigées s'ouvriront à toi,</p>
+                <p>cherche la route vers le sang.</p>
+                <p class="highlight">Il t'attend au-delà du voile.</p>
+            </div>
+
+            <div class="hints" data-hint-stage="step2">
+                <button class="hint-button" type="button" data-action="reveal-hint">
+                    INTERROGER LA GRÂCE
+                </button>
+
+                <div class="hint-container" data-role="hint-container" aria-live="polite" aria-hidden="true" hidden>
+                    <div class="hint-carousel" data-role="hint-carousel">
+                        <div class="hint-track" data-role="hint-track"></div>
+                    </div>
+
+                    <div class="hint-navigation" data-role="hint-navigation" aria-label="Navigation des indices"></div>
+
+                    <button class="next-hint-button" type="button" data-action="next-hint">
+                        INTERROGER LA GRÂCE
+                    </button>
+
+                    <p class="hint-status" data-role="hint-status" hidden>Là où la Grâce se tait, le chemin commence.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="scene" id="scene-final" aria-label="Message final">
+            <div class="final-symbol" aria-hidden="true">◇</div>
+            <p class="final-text">QUE TA QUÊTE COMMENCE</p>
+        </section>
     </main>
 
+    <footer class="scene-controls">
+        <button id="continue-button" class="continue-button" type="button">
+            CONTINUER
+        </button>
+    </footer>
 
-    <!-- =========================================================
-         SCRIPT
-         ========================================================= -->
+    <!-- BOUTON TEMPORAIRE DE TEST — À SUPPRIMER AVANT LA VERSION FINALE -->
+    <button id="reset-progress-button" class="reset-progress-button" type="button">
+        RÉINITIALISER LA PROGRESSION
+    </button>
 
-    <script src="script.js"></script>
-
+    <script src="js/quest-data.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
